@@ -42,8 +42,6 @@
 0 0 * * * node /scripts/jd_xtg.js >> /scripts/logs/jd_xtg.log 2>&1
 #jd_babelDiy
 30 12 * * * node /scripts/jd_babelDiy.js >> /scripts/logs/jd_babelDiy.log 2>&1
-#星店长
-0 1,21 * * * node /scripts/jd_star_shop.js >> /scripts/logs/jd_star_shop.log 2>&1
 #明星小店
 5 9 * * * node /scripts/jd_starStore.js >> /scripts/logs/jd_starStore.log 2>&1
 #主会场红包雨
