@@ -1,25 +1,4 @@
-/*
-author: 疯疯
-东东健康社区
-更新时间：2021-4-22
-活动入口：京东APP首页搜索 "玩一玩"即可
 
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-===================quantumultx================
-[task_local]
-#东东健康社区
-10 0-23/4 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_health.js, tag=东东健康社区, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
-
-=====================Loon================
-[Script]
-cron "10 0-23/4 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_health.js, tag=东东健康社区
-
-====================Surge================
-东东健康社区 = type=cron,cronexp=10 0-23/4 * * *,wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_health.js
-
-============小火箭=========
-东东健康社区 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_health.js, cronexpr="0 0,6,12,18 * * *", timeout=3600, enable=true
- */
 const $ = new Env("东东健康社区");
 const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 let cookiesArr = [],

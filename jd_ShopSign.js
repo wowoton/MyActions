@@ -1,24 +1,4 @@
-/*
-interCenter渠道店铺签到
 
-更新地址：https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_inter_shop_sign.js
-============Quantumultx===============
-[task_local]
-#interCenter渠道店铺签到
-0 0 * * * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_inter_shop_sign.js, tag=interCenter渠道店铺签到,  enabled=true
-[rerwite_local]
-#interCenter渠道店铺签到
-(interact_center_shopSign_getActivityInfo) url script-request-header https://raw.githubusercontent.com/monk-coder/dust/rewrite/m_get_inter_shop_sign.js
-[mimt]
-hostname = api.m.jd.com
-================Loon==============
-[Script]
-cron "0 0 * * *" script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_inter_shop_sign.js,tag=interCenter渠道店铺签到
-===============Surge=================
-interCenter渠道店铺签到 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_inter_shop_sign.js
-============小火箭=========
-interCenter渠道店铺签到 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_inter_shop_sign.js, cronexpr="0 0 * * *", timeout=3600, enable=true
-*/
 
 const $ = new Env('interCenter渠道店铺签到');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';

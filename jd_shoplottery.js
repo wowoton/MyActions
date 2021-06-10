@@ -1,30 +1,4 @@
-/*
-店铺大转盘
-跟柘柘的粉丝互动是一个道理
 
-更新日期：2021-03-29 
- -增加过滤通知中的无用信息
- -增加推送通知中实物奖品的活动店铺ID，方便领奖
- -修改cron时间，避免中奖后没及时领奖
-
-更新地址：https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js
-============Quantumultx===============
-[task_local]
-#店铺大转盘
-3 0,10,23 * * * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js, tag=店铺大转盘,  enabled=true
-[rerwite_local]
-#店铺大转盘
-^https://lzkj\-isv\.isvjcloud\.com\/wxCommonInfo\/initActInfo url script-request-body https://raw.githubusercontent.com/monk-coder/dust/dust/rewrite/m_get_shop_lottery.js
-[mimt]
-hostname = *.isvjcloud.com
-================Loon==============
-[Script]
-cron "3 0,10,23 * * *" script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js,tag=店铺大转盘
-===============Surge=================
-店铺大转盘 = type=cron,cronexp="3 0,10,23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js
-============小火箭=========
-店铺大转盘 = type=cron,script-path=https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js, cronexpr="3 0,10,23 * * *", timeout=3600, enable=true
-*/
 const $ = new Env('店铺大转盘');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';

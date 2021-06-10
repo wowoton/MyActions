@@ -1,37 +1,4 @@
-/*
- * @Author: LXK9301 https://github.com/LXK9301
- * @Date: 2020-11-03 09:25:47
- * @Last Modified by: LXK9301
- * @Last Modified time: 2021-5-25 09:27:07
- */
-/*
-京东手机狂欢城活动，每日可获得20+以上京豆（其中20京豆是往期奖励，需第一天参加活动后，第二天才能拿到）
-活动时间: 2021-5-24至2021-6-20
-活动入口：暂无 [活动地址](https://carnivalcity.m.jd.com/)
 
-往期奖励：
-a、第1名、第618名可获得实物手机一部
-b、 每日第2-10000名，可获得50个京豆
-c、 每日第10001-30000名可获得20个京豆
-d、 30000名之外，0京豆
-
-
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-===================quantumultx================
-[task_local]
-#京东手机狂欢城
-0 0-18/6 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_carnivalcity.js, tag=京东手机狂欢城, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
-
-=====================Loon================
-[Script]
-cron "0 0-18/6 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_carnivalcity.js, tag=京东手机狂欢城
-
-====================Surge================
-京东手机狂欢城 = type=cron,cronexp=0 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_carnivalcity.js
-
-============小火箭=========
-5G狂欢城 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_carnivalcity.js, cronexpr="0 0,6,12,18 * * *", timeout=3600, enable=true
-*/
 const $ = new Env('京东手机狂欢城');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;

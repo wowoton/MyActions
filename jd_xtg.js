@@ -1,26 +1,4 @@
-/*
-家电星推官脚本
-Last Modified time: 2021-05-31 9:15:04
-家电星推官活动地址：https://3.cn/-1eD1VOa?_ts=1622072397979&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&gx=RnFtxGZZPTONndRP--twDLBLeC4DoX3_2wf2
-活动时间：2021年5月27日 00:00:00-2021年6月18日 23:59:59
-京豆先到先得！！！！！！！！！！！
-出现任务做完没领取的情况，就再运行一次脚本
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-============Quantumultx===============
-[task_local]
-#家电星推官
-0 0 0 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xtg.js, tag=家电星推官, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
-================Loon==============
-[Script]
-cron "0 0 0 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xtg.js,tag=家电星推官
-
-===============Surge=================
-家电星推官 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xtg.js
-
-============小火箭=========
-家电星推官 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xtg.js, cronexpr="0 0 0 * * *", timeout=3600, enable=true
- */
 const $ = new Env("家电星推官");
 const activeEndTime = "2021/06/18 23:59:59+08:00"; //活动结束时间
 const notify = $.isNode() ? require("./sendNotify") : "";

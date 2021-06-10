@@ -1,28 +1,4 @@
-/*
- * @Author: LXK9301
- * @Date: 2020-11-03 18:12:38
- * @Last Modified by: LXK9301
- * @Last Modified time: 2021-05-19 16:27:18
-*/
-/*
-京东全民开红包
-活动入口：京东APP首页-领券-锦鲤红包。[活动地址](https://happy.m.jd.com/babelDiy/zjyw/3ugedFa7yA6NhxLN5gw2L3PF9sQC/index.html)
-未实现功能：领3张券功能
 
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-================QuantumultX==================
-[task_local]
-#京东全民开红包
-1 1,2,23 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_redPacket.js, tag=京东全民开红包, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
-===================Loon==============
-[Script]
-cron "1 1,2,23 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_redPacket.js, tag=京东全民开红包
-===============Surge===============
-[Script]
-京东全民开红包 = type=cron,cronexp="1 1,2,23 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_redPacket.js
-====================================小火箭=============================
-京东全民开红包 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_redPacket.js, cronexpr="1 1,2,23 * * *", timeout=3600, enable=true
- */
 const $ = new Env('京东全民开红包');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;

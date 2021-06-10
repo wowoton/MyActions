@@ -1,12 +1,4 @@
-/*
-京东极速版签到+赚现金任务
-每日9毛左右，满3，10，50可兑换无门槛红包
-⚠️⚠️⚠️一个号需要运行40分钟左右
 
-活动时间：长期
-活动入口：京东极速版app-现金签到
-原脚本作者：lxk0301
-*/
 const $ = new Env('京东极速版');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;

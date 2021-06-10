@@ -1,19 +1,4 @@
-/*
-update 2021/6/7
-京东试用：脚本更新地址 https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js
-脚本兼容: QuantumultX, Node.js
 
-⚠️ 非常耗时的脚本！
-每天最多关注300个商店，但用户商店关注上限为500个。
-请配合取关脚本试用，使用 jd_unsubscribe.js 提前取关至少250个商店确保京东试用脚本正常运行。
-==========================Quantumultx=========================
-[task_local]
-# 取关京东店铺商品，请在 boxjs 修改取消关注店铺数量
-5 10 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=取关京东店铺商品, enabled=true
-
-# 京东试用
-30 10 * * * https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js, tag=京东试用, img-url=https://raw.githubusercontent.com/ZCY01/img/master/jdtryv1.png, enabled=true
- */
 const $ = new Env('京东试用')
 
 const selfDomain = 'https://try.m.jd.com'
